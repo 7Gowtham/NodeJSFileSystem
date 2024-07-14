@@ -11,6 +11,7 @@ const port = 4000;
 
 const dirPath = path.join('E:/GUVI/NodeJs-Express/NodeJs-Day2/Express')
 
+// To create a text file with current timestamp
 app.get('/write-file',(req, res)=>{
     const date = new Date()
     let currentTimeStamp = date.toISOString().replace(/:/g,'-');
@@ -27,6 +28,7 @@ app.get('/write-file',(req, res)=>{
     }
 })
 
+//To retrieve all the text files in the directory
 app.get('/list-files', (req, res)=>{
     let txt_files = []
     try {
