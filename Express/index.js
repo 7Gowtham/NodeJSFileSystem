@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 const dirPath = path.join('E:/GUVI/NodeJs-Express/NodeJs-Day2/Express')
 
