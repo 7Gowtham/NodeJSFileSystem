@@ -1,15 +1,19 @@
 // import express from 'express'
 // import fs from 'fs'
 // import path from 'path';
-
+const dotenv = require('dotenv') 
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-
+dotenv.config()
 const app = express();
 const port = process.env.PORT || 4000;
 
-const dirPath = path.join('E:/GUVI/NodeJs-Express/NodeJs-Day2/Express')
+const dirPath = path.join('E:/GUVI/NodeJs-Express/Express/FileSystem')
+
+app.get('/',(req,res)=>{
+    res.send("Heloo")
+})
 
 // To create a text file with current timestamp
 app.get('/write-file',(req, res)=>{
