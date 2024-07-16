@@ -9,7 +9,7 @@ dotenv.config()
 const app = express();
 const port = process.env.PORT || 4000;
 
-const dirPath = path.join('E:/GUVI/NodeJs-Express/Express/FileSystem')
+const dirPath = path.join(__dirname,"FileSystem")
 
 app.get('/',(req,res)=>{
     res.send("Heloo")
@@ -20,7 +20,8 @@ app.get('/write-file',(req, res)=>{
     const date = new Date()
     let currentTimeStamp = date.toISOString().replace(/:/g,'-');
     let filename = `${currentTimeStamp}.txt`;
-    let filepath = path.join(dirPath, filename)
+    let filepath = path.join(__dirname,"FileSystem",filename);
+    console.log(filepath)
 
     try {
         fs.writeFileSync(filepath, currentTimeStamp, 'utf-8')
