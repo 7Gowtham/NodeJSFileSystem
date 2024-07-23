@@ -1,6 +1,3 @@
-// import express from 'express'
-// import fs from 'fs'
-// import path from 'path';
 const dotenv = require('dotenv') 
 const express = require('express');
 const fs = require('fs');
@@ -12,7 +9,7 @@ const port = process.env.PORT || 4000;
 const dirPath = path.join(__dirname,"FileSystem")
 
 app.get('/',(req,res)=>{
-    res.send("Heloo")
+    res.send("Heloo!!, Welcome to NodeJS FileSystem")
 })
 
 // To create a text file with current timestamp
